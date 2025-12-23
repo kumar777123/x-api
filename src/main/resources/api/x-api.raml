@@ -1,0 +1,28 @@
+#%RAML 1.0
+title: x-api
+version: v1
+protocols: [HTTP, HTTPS]
+description: This an Experience Api
+
+traits:
+  client-enforcement: !include /exchange_modules/dc047a94-00f1-4405-91f1-bf0913787b89/client-enforcement-credentials/1.0.0/client-enforcement-credentials.raml
+
+uses:
+  lb: /libraries/library.raml
+
+
+/customer:
+  is: [client-enforcement]
+  post:    
+    body:
+      application/json:
+        type: lb.postCustomerRequest
+        examples:
+          example: !include /examples/request/postCustomerRequest.raml
+    responses:
+      201:
+        body:
+          application/json:
+            type: lb.postCustomerResponse
+            examples:
+              example: !include /examples/response/postCustomerResponse.raml
