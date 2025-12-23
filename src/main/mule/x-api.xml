@@ -126,7 +126,8 @@ output application/json
         </error-handler>
     </flow>
     <flow name="post:\customer:application\json:x-api-config">
-        <ee:transform doc:name="Transform Message">
+        <logger level="INFO" doc:name="request" doc:id="0a6ba2b0-df2f-4a35-a18e-bd4b8574ffd2" message="request send to customer"/>
+		<ee:transform doc:name="Transform Message">
             <ee:message>
                 <ee:set-payload><![CDATA[%dw 2.0
 output application/json
@@ -136,5 +137,6 @@ output application/json
 }]]></ee:set-payload>
             </ee:message>
         </ee:transform>
+		<logger level="INFO" doc:name="response" doc:id="6c9efac5-d406-4a3e-adfd-c1303a08497f" message="response from customer resource"/>
     </flow>
 </mule>
