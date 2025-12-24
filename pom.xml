@@ -7,7 +7,7 @@
 	<version>1.0.0</version>
 	<packaging>mule-application</packaging>
 
-	<name>x-api-1</name>
+	<name>x-api</name>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -17,11 +17,11 @@
 
 	<build>
 		<plugins>
-			<!-- <plugin>
+			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-clean-plugin</artifactId>
 				<version>3.2.0</version>
-			</plugin> -->
+			</plugin>
 			<!-- <plugin>
 				<groupId>org.mule.tools.maven</groupId>
 				<artifactId>mule-maven-plugin</artifactId>
@@ -46,6 +46,19 @@
 						<password>${anypoint.password}</password>
 						<applicationName>${appname}</applicationName>
 						<replicas>${replicas}</replicas>
+						<vCores>${vCores}</vCores>
+						<deploymentSettings>
+							<http>
+								<inbound>
+									<forwardSslSession>false</forwardSslSession>
+									<lastMileSecurity>false</lastMileSecurity>
+								</inbound>
+							</http>
+						</deploymentSettings>
+						<properties>
+							<anypoint.platform.client_id>${client_id}</anypoint.platform.client_id>
+							<anypoint.platform.client_secret>${client_secret}</anypoint.platform.client_secret>
+						</properties>
 					</cloudhub2Deployment>
 				</configuration>
 			</plugin>
