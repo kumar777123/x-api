@@ -40,14 +40,13 @@
 						<provider>${provider}</provider>
 						<environment>${env}</environment>
 						<target>${target}</target>
+						<muleVersion>${muleVersion}</muleVersion>
 						<muleVersion>${mule.version}</muleVersion>
 						<releaseChannel>LTS</releaseChannel>
 						<username>${anypoint.username}</username>
 						<password>${anypoint.password}</password>
 						<applicationName>${appname}</applicationName>
-						<businessGroup>${business}</businessGroup>
 						<replicas>${replicas}</replicas>
-						<vCores>${vCores}</vCores>
 					</cloudhub2Deployment>
 				</configuration>
 			</plugin>
