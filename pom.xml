@@ -20,11 +20,11 @@
 
 	<build>
 		<plugins>
-			<plugin>
+			<!-- <plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-clean-plugin</artifactId>
 				<version>3.2.0</version>
-			</plugin>
+			</plugin> -->
 			<!-- <plugin>
 				<groupId>org.mule.tools.maven</groupId>
 				<artifactId>mule-maven-plugin</artifactId>
@@ -51,8 +51,6 @@
 						<businessGroup>${business}</businessGroup>
 						<replicas>${replicas}</replicas>
 						<vCores>${vCores}</vCores>
-						anypoint.platform.client_id=433ddcf9bc044d3a9e6070ad69e5fb2b
-anypoint.platform.client_secret=f2510F7E788243809c8925a6E4fBc464
 					</cloudhub2Deployment>
 				</configuration>
 			</plugin>
@@ -107,13 +105,13 @@ anypoint.platform.client_secret=f2510F7E788243809c8925a6E4fBc464
 		</pluginRepository>
 	</pluginRepositories>
 	
-	<distributionManagement>
+	<!-- <distributionManagement>
         <repository>
             <id>anypoint-exchange-v3</id>
             <name>Corporate Repository</name>
             <url>https://maven.anypoint.mulesoft.com/api/v3/organizations/${project.groupId}/maven</url>
             <layout>default</layout>
         </repository>
-    </distributionManagement>
+    </distributionManagement> -->
 
 </project>
