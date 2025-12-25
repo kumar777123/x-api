@@ -49,7 +49,7 @@
 						<vCores>${vCores}</vCores>
 						<connectedAppClientId>${ap.ca.id}</connectedAppClientId>
 						<connectedAppClientSecret>${ap.ca.secret}</connectedAppClientSecret>
-						<connectedAppGrantType>Client_credentails</connectedAppGrantType>
+						<connectedAppGrantType>client_credentails</connectedAppGrantType>
 						<deploymentSettings>
 							<http>
 								<inbound>
