@@ -42,11 +42,14 @@
 						<target>${target}</target>
 						<muleVersion>${muleVersion}</muleVersion>
 						<releaseChannel>LTS</releaseChannel>
-						<username>${anypoint.username}</username>
-						<password>${anypoint.password}</password>
+						<!-- <username>${anypoint.username}</username>
+						<password>${anypoint.password}</password>  -->
 						<applicationName>${appname}</applicationName>
 						<replicas>${replicas}</replicas>
 						<vCores>${vCores}</vCores>
+						<connectedAppClientId>${ap.ca.id}</connectedAppClientId>
+						<connectedAppClientSecret>${ap.ca.secret}</connectedAppClientId>
+						<connectedAppGrantType>Client_credentails</connectedAppGrantType>
 						<deploymentSettings>
 							<http>
 								<inbound>
